@@ -8,7 +8,7 @@ const filePath = process.argv[2];
 fs.readFile(path.join(__dirname, filePath), "utf8", function (err, data) {
   if (err) {
     // Print error message for invalid file path
-    console.log(`Error: ${err.message}`);
+    console.log(`Column '${filePath}' not found in the CSV.`);
   } else {
     // Print the file content
     console.log(data);
